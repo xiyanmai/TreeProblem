@@ -90,7 +90,6 @@ class BSTNode(Generic[T]):
             elif node.value > self.value:
                 return self.right.delete_node(node)
 
-
     def remove(self, value):
         node = self.get(value)
         if not node.left and not node.right:
