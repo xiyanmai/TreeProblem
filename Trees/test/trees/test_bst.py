@@ -47,5 +47,6 @@ class TestBST(unittest.TestCase):
         cmp_tree._num_nodes = 5
         self.assertNotEqual(tree, cmp_tree)
 
+
 if __name__ == '__main__':
     unittest.main()

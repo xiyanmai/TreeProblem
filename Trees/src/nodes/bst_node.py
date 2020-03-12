@@ -23,6 +23,7 @@ class BSTNode(Generic[T]):
         self.left = None
         self.right = None
         self.parent = parent
+        self.children = children
 
     def __iter__(self) -> Iterable["BSTNode[T]"]:
         """
@@ -62,17 +63,17 @@ class BSTNode(Generic[T]):
             return self.left.get_min()
 
 
-    def get(self, input):
-        if input == self.value:
+    def get(self, get_input):
+        if get_input == self.value:
             return self
-        elif input < self.value:
+        elif get_input < self.value:
             if self.left:
-                return self.left.get(input)
+                return self.left.get(get_input)
             else:
                 raise MissingValueError
-        elif input > self.value:
+        elif get_input > self.value:
             if self.right:
-                return self.right.get(input)
+                return self.right.get(get_input)
             else:
                 raise MissingValueError
 

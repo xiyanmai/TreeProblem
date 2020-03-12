@@ -25,6 +25,7 @@ class BST(Generic[T, K]):
         functions
         """
         self.root = root
+        self.key = key
 
     @property
     def height(self) -> int:
@@ -46,8 +47,6 @@ class BST(Generic[T, K]):
             return get_height(self.root)
         else:
             return -1
-
-
 
     def __len__(self) -> int:
         """
@@ -128,8 +127,6 @@ class BST(Generic[T, K]):
             return self.root.get_min()
         else:
             raise EmptyTreeError
-
-
 
     def __eq__(self, other: object) -> bool:
         if self is other:
